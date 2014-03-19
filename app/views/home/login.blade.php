@@ -2,9 +2,9 @@
 
 @section('content')
 
-	<div class="span4 offset1">
+	<div class="col-md-6 col-md-offset-3">
 
-		<div class="well">
+		<div class="well" id="content">
 			<legend>Please Login</legend>
 			<!--This will open up the login in form and we will open it at the url 'login'-->
 			{{ Form::open(array('url' => 'login')) }}

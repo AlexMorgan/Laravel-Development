@@ -27,6 +27,18 @@ class HomeController extends BaseController {
             return View::make('home.index');
         }
 
+    public function getTeam()
+        {
+            return View::make('home.team');
+        }
+
+
+    public function getAbout()
+        {
+            return View::make('home.about');
+        }
+
+
    	/*This is the controller that we created for the login page from the routes.php page*/
 	public function getLogin()
     	{

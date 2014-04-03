@@ -23,6 +23,10 @@ Route::get('register', 'HomeController@getRegister');
 
 Route::get('logout', 'HomeController@logout');
 
+Route::get('team', 'HomeController@getTeam');
+
+Route::get('about', 'HomeController@getAbout');
+
 /*----- Route for the register|POST method page -----*/
 Route::post('register', 'HomeController@postRegister');
 Route::post('login', 'HomeController@postLogin');

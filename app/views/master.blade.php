@@ -36,9 +36,9 @@
               <a data-toggle="dropdown" data-target="#">About<b class="caret"></b></a>
                 <ul class="dropdown-menu">
                   <li>{{HTML::link('about', 'About TutorScout')}}</li>
-                  <li>{{HTML::link('team', 'About the Team')}}</li>
+                  <li>{{HTML::link('team', 'Meet the Team')}}</li>
                   <li class="divider"></li>
-                  <li> {{ HTML::link('pricing', 'Plans & Pricing') }}<!-- <a href="#">Plans &amp; Pricing</a -->></li>
+                  <li> {{ HTML::link('pricing', 'Plans & Pricing') }}<!-- <a href="#">Plans &amp; Pricing</a --></li>
                 </ul>
             </li>
             @if(Auth::user())
@@ -52,8 +52,11 @@
     </div><!-- End Navbar -->
 
 	<!--Each row-fluid must add up to 12-->
-	@yield('content')g
-
+	@yield('content')
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
 </body>
 </html> 
 

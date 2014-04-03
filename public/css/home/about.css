@@ -1,0 +1,16 @@
+/*If I were to develop this again from scratch I would make sure to have a master css file for reoccuring styling and then more specific files*/
+
+.mission  {
+	text-align: center;
+	font-size: 5em;
+	font-family: 'Open Sans', sans-serif;
+	color: #0098bd;
+}
+
+.main-content {
+	padding-top: 80px; 
+}
+
+h2 {
+	font-family: 'Open Sans', sans-serif;
+}

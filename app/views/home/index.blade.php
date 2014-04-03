@@ -16,9 +16,11 @@
      
       <div class="row ft">
         <div class="col-sm-6">
-          <div class="ft-icon img-rounded hidden-xs">
+          <div class="">
+            <!-- ft-icon img-rounded hidden-xs -->
             <!-- <div class="glyphicon glyphicon-star">
             </div> -->
+            <img class="icomoon" src="../img/location.jpg" alt='location'>
           </div>
         </div>
         <div class="col-sm-6 ft-copy">
@@ -37,13 +39,19 @@
           </p>
         </div>
         <div class="col-sm-6">
-          <div id="ft-icon2" class="ft-icon img-rounded hidden-xs"></div>
+          <div>
+            <img class="icomoon" src="../img/time.jpg" alt='Time'>
+            <!-- id="ft-icon2" class="ft-icon img-rounded hidden-xs" -->
+          </div>
         </div>
       </div>
 
       <div class="row ft">
         <div class="col-sm-6">
-          <div id="ft-icon3" class="ft-icon img-rounded hidden-xs"></div>
+          <div>
+            <!-- id="ft-icon3" class="ft-icon img-rounded hidden-xs" -->
+            <img class="icomoon" src="../img/subjects.jpg" alt='Time'>
+          </div>
         </div>
         <div class="col-sm-6 ft-copy">
           <h2>Choose From a Variety of Subjects</h2>
@@ -77,10 +85,7 @@
 
     </div> <!-- End Main Content -->
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+
 
 
 

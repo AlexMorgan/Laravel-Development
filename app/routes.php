@@ -27,6 +27,14 @@ Route::get('team', 'HomeController@getTeam');
 
 Route::get('about', 'HomeController@getAbout');
 
+
+/*----- Route for the UsersController -----*/
+
+Route::get('contact', 'UsersController@getContact');
+
+Route::post('contact', 'UsersController@postContact');
+
+
 /*----- Route for the register|POST method page -----*/
 Route::post('register', 'HomeController@postRegister');
 Route::post('login', 'HomeController@postLogin');

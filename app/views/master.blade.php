@@ -6,8 +6,11 @@
     <title></title>
     <!--{{ HTML::script('js/jquery.js') }}
     {{ HTML::script('js/bootstrap.js') }}-->
-    {{ HTML::style('css/my-styles.css') }}
     {{ HTML::style('css/bootstrap.min.css') }}
+    {{ HTML::style('css/my-styles.css') }}
+    {{ HTML::style('http://fonts.googleapis.com/css?family=Open+Sans:300')}}
+<!--     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'> -->
+
 </head>
 
 <body>
@@ -35,7 +38,7 @@
                   <li>{{HTML::link('about', 'About TutorScout')}}</li>
                   <li>{{HTML::link('team', 'About the Team')}}</li>
                   <li class="divider"></li>
-                  <li><a href="#">Plans &amp; Pricing</a></li>
+                  <li> {{ HTML::link('pricing', 'Plans & Pricing') }}<!-- <a href="#">Plans &amp; Pricing</a -->></li>
                 </ul>
             </li>
             @if(Auth::user())
@@ -49,7 +52,7 @@
     </div><!-- End Navbar -->
 
 	<!--Each row-fluid must add up to 12-->
-	@yield('content')
+	@yield('content')g
 
 </body>
 </html> 

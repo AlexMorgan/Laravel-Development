@@ -16,13 +16,18 @@
 				{{ implode('', $errors->all('<li class="error">:message</li>')) }}
 			</div>
 			@endif
-			{{ Form::text('username', '', array('placeholder' => 'username')) }}
-			<!-- This will be the value of the email text blank, which will be blank so we won't enter anything-->
-			{{ Form::text('email', '', array('placeholder' => 'Email')) }}
-			{{ Form::password('password', array('placeholder' => 'Password'))}}
-			{{ Form::submit('Register', array('class' => 'btn btn-success')) }}
-			<!-- btn class= btn-danger changes it to a red button -->
-			{{ HTML::link('/', 'Cancel', array('class' => 'btn btn-danger')) }}
+			<div class="signup">
+				{{ Form::text('username', '', array('placeholder' => 'username')) }}
+				<!-- This will be the value of the email text blank, which will be blank so we won't enter anything-->
+				{{ Form::text('email', '', array('placeholder' => 'Email')) }}
+				{{ Form::password('password', array('placeholder' => 'Password')) }}
+				{{ Form::password('password_confirmation', array('placeholder' => 'Confirm Password')) }}
+			</div>
+			<div class="row-pad submit">
+				{{ Form::submit('Register', array('class' => 'btn btn-success')) }}
+				<!-- btn class= btn-danger changes it to a red button -->
+				{{ HTML::link('/', 'Cancel', array('class' => 'btn btn-danger')) }}
+			</div>
 			{{ Form::close() }}
 		</div>
 

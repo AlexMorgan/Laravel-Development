@@ -6,7 +6,7 @@
     <div class="jumbotron">
       <div class="container">
         <div id="slogan">
-          <h1>Find Tutors. Find Mentors. Find Success.</h1>
+          <h1 class="slogan">Find Tutors. Find Mentors. Find Success.</h1>
         </div>
       </div>
     </div><!-- End Jumbtron -->
@@ -73,29 +73,7 @@
       </div><!-- End Panel -->
       <hr>
 
-      <footer class="main-footer">
-        <div class="row">
-          <div class="col-sm-5">
-            <!-- <img src="img/ts-logo.png" class="ts-logo" alt="logo"> -->
-            <p>Tutor Scout creates a teaching environment with students in search of qualified tutors to complete elementary, middle school, HS, or college and a pool of successful professionals. This tutoring service offers [philanthropic] opportunities to professionals and students to foster symbiotic relationships across academic and professional fields where you can both give and receive instruction.</p>
-          </div>
-          <div class="col-sm-1 col-sm-offset-1">
-            <a class="ftr-item" href="#">Home</a>
-          </div>
-          <div class="col-sm-1">
-            <a class="ftr-item" href="#">About</a>
-          </div>
-          <div class="col-sm-1">
-            <a class="ftr-item" href="#">Contact</a>
-          </div>
-          <div class="col-sm-1">
-            <a class="ftr-item" href="#">Signup</a>
-          </div>
-          <div class="col-sm-1">
-            <a class="ftr-item" href="#">FAQs</a>
-          </div>
-        </div>
-      </footer>
+    @include('footer')
 
     </div> <!-- End Main Content -->
 

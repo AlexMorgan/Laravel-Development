@@ -23,7 +23,7 @@
 	width: 50%;
 }
 
-.b rand:hover {
+.brand:hover {
 	text-decoration: none; 
 }
 
@@ -34,8 +34,12 @@
 	background-image: url('../img/scout.jpg');
 	background-repeat: no-repeat;
 	background-size: 100%;
-	padding: 300px 0 310px 0;
+	padding: 275px 0 220px 0;
 	margin-bottom: 70px;
+}
+
+.slogan {
+	font-family: 'Open Sans', sans-serif;
 }
 
 
@@ -140,4 +144,19 @@
 	.main-logo {
 		font-size: 1.5em;
 	}
+}
+
+/* Registration & Login
+================================= */
+.signup {
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.submit {
+	margin-left: 50px;
+}
+
+.login {
+	margin: 100px 0 100px 0;
 }

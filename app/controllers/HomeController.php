@@ -45,7 +45,7 @@ class HomeController extends BaseController {
                 {
 
                     //We are redirecting our user to the /login page and returning the validation messages 
-                    return Redirect::to('login')->withErrors($v);
+                    return Redirect::to('login')->withErrors($v)->withInput();
 
                 } else {
                     //Creating the variable credentials to makes sure that the email entered matches the email entered when 
@@ -76,7 +76,12 @@ class HomeController extends BaseController {
     		/*Here we are going to grab all the input and put it into a variable called $input*/
     		$input = Input::all();
     		/*Here we are making the username, email and passwords required as well as make the email and username unique!*/
-    		$rules = array('username' => 'required|unique:users', 'email' => 'required|unique:users|email', 'password' => 'required');
+    		$rules = array(
+                'username' => 'required|unique:users', 
+                'email' => 'required|unique:users|email', 
+                'password' => 'required|min:6', 
+                'password_confirmation' => 'required|same:password'
+                );
 
     		$v = Validator::make($input, $rules);
 
@@ -93,6 +98,14 @@ class HomeController extends BaseController {
     			$user->password = $password;
     			$user->save();
 
+
+                //This will send the user an email which we created in our views/emails/welcome.blade.php fileS 
+                Mail::send('emails.welcome', $input, function($message)
+                {
+                    $message->to(Input::get('email'), 'username')->subject('Welcome!');
+                });
+
+
     			/*This will redirect our users to the login - IF it passes*/
     			return Redirect::to('login');
 
@@ -102,6 +115,19 @@ class HomeController extends BaseController {
     			return Redirect::to('register')->withInput()->withErrors($v);
     		}
     	}
+
+
+    // public function postSignup()
+    //     {
+    //         $input = Input::all();
+
+    //         $signuprules = array(
+    //             'email' => 'required|unique:users|email'
+
+    //             $v = Validator::make($input, $signuprules)
+    //             );
+    //     }
+
 
     public function logout()
         {

@@ -28,7 +28,8 @@ return array(
 	|
 	*/
 
-	'host' => 'smtp.mailgun.org',
+	'host' => 'smtp.gmail.com',
+	// 'smtp.mailgun.org'
 
 	/*
 	|--------------------------------------------------------------------------
@@ -54,7 +55,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => null, 'name' => null),
+	'from' => array('address' => 'alexmorgan.am@gmail.com', 'name' => 'Alex Morgan'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -80,7 +81,7 @@ return array(
 	|
 	*/
 
-	'username' => null,
+	'username' => 'alexmorgan.am@gmail.com',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,7 +94,7 @@ return array(
 	|
 	*/
 
-	'password' => null,
+	'password' => 'oexaddnnvscqmovy',
 
 	/*
 	|--------------------------------------------------------------------------

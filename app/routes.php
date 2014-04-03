@@ -20,10 +20,14 @@ Route::get('/', 'HomeController@getIndex');
 Route::get('login', 'HomeController@getLogin');
 /*----- Route for the register page -----*/
 Route::get('register', 'HomeController@getRegister');
+
+Route::get('logout', 'HomeController@logout');
+
 /*----- Route for the register|POST method page -----*/
 Route::post('register', 'HomeController@postRegister');
 Route::post('login', 'HomeController@postLogin');
-Route::get('logout', 'HomeController@logout');
+// Route::post('/' , 'HomeController@postSignup');
+
 /*Creates a group filter*/
 Route::group(array('before' => 'auth'), function(){
 

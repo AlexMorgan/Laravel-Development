@@ -14,8 +14,18 @@
 
 /*--------------- Routes for Login Registration Page - http://l4.tutorscout.com/ ----------------*/
 
+/*----- Password Resets Resource Route  -----*/
+Route::resource('password_resets', 'PasswordResetsController');
+
+//Here we are getting the password_resets/reset view that we have created,
+// but it's important to remember to pass it with the $token that is stored 
+//within our reminder.blade.php file in our views/emails/auth folder
+Route::get('password_resets/reset/{token}', 'PasswordResetsController@reset');
+Route::post('password_resets/reset/{token}', 'PasswordResetsController@postReset');
+
 /*----- Route for the home page -----*/
 Route::get('/', 'HomeController@getIndex');
+
 /*----- Route for the login page -----*/
 Route::get('login', 'HomeController@getLogin');
 /*----- Route for the register page -----*/
@@ -36,6 +46,7 @@ Route::post('contact', 'UsersController@postContact');
 
 
 /*----- Route for the register|POST method page -----*/
+Route::post('index', 'HomeController@postNewContact');
 Route::post('register', 'HomeController@postRegister');
 Route::post('login', 'HomeController@postLogin');
 // Route::post('/' , 'HomeController@postSignup');

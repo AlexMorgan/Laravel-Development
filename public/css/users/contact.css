@@ -19,9 +19,43 @@ p {
 }
 
 .subject-area {
-	margin-left: 8px;
+/*	margin-left: 9px;*/
+	margin-bottom: 2.5%;
+}
+
+.email-area {
+/*	margin-left: 19px;*/
+	margin-bottom: 2.5%;
+}
+
+.name-area {
+/*	margin-left: 22px;*/
+
 }
 
 .contact-submit {
-	margin: 20px 0 0 60px;
+	margin: 20px 0 0 0px;
+}
+
+.message-area {
+	width: 60%;
+}
+
+/*-----Small Devices-----*/
+@media (max-width: 767px) {
+	.message-area {
+		width: 100%;
+	}
+	.name-area {
+		width: 100%;
+	}
+	.contact-area {
+		width: 100%;
+	}
+	.email-area {
+		width: 100%;
+	}
+	.subject-area {
+		width: 100%;
+	}
 }

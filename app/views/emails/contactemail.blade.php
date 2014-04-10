@@ -10,6 +10,8 @@
 			Someone just contacted us:
 		</div>
 
+		<div>Name: {{ $emailname }}</div>
+		<div>Email: {{ $emailaddress }} </div>
 		<div>Subject: {{ $subject }} </div>
 		<div>Message: {{ $emailmessage }} </div>
 

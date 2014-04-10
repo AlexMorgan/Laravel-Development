@@ -69,13 +69,26 @@
             <p class="panel-txt">Enter your email to get updates on TutorScout activity</p>
           </div>
           <div class="col-sm-4">
-            <form>
-              <label class="sr-only">Enter Email</label> <!-- For screen-readers -->
+<!--             <form>
+              <label class="sr-only">Enter Email</label>
               <input type="email" class="form-control email-txt" id="inputEmail" placeholder="Enter email">
               <button class="btn  btn-submit" type="submit">
                 <span class="glyphicon glyphicon-arrow-right"></span>
               </button>
-            </form>
+            </form> -->
+
+            {{ Form::open(array('url' => 'index')) }}
+
+            @if($errors->any())
+            <div class="alert alert-error">
+              <!--Shortcut for 'times'-->
+              <a href="#" class="close" data-dismiss="alert">&times;</a>
+              {{ implode('', $errors->all('<li class="error">:message</li>')) }}
+            </div>
+            @endif
+
+            {{ Form::text('email', '', array('placeholder' => 'Enter email', 'class'=>'form-control email-txt')) }}
+            {{ Form::close() }}
           </div>
         </div>
       </div><!-- End Panel -->

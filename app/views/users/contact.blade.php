@@ -29,13 +29,23 @@
 		<div class="well">
 			<div class="row-pad">
 				{{ Form::open(array('url' => 'contact')) }}
-				{{ Form::label('Subject') }}
-				{{ Form::text('subject', '', array('placeholder' => 'Enter a Subject', 'class' => 'subject-area')) }}
+<!-- 				{{ Form::label('Name') }} -->
+				{{ Form::text('name', '', array('placeholder' => 'Name', 'class' => 'name-area')) }}
 			</div>
 
 			<div class="row-pad">
-				{{ Form::label('Message') }}
-				{{ Form::textarea('message', '', array('placeholder' => 'Enter a Message')) }}
+<!-- 				{{ Form::label('E-mail') }} -->
+				{{ Form::text('email', '', array('placeholder' => 'Email', 'class' => 'email-area')) }}
+			</div>
+
+			<div class="row-pad">
+<!-- 				{{ Form::label('Subject') }} -->
+				{{ Form::text('subject', '', array('placeholder' => 'Subject', 'class' => 'subject-area')) }}
+			</div>
+
+			<div class="row-pad">
+<!-- 				{{ Form::label('Message') }} -->
+				{{ Form::textarea('message', '', array('placeholder' => 'Enter a Message', 'class' => 'message-area')) }}
 			</div>
 
 			<div class="row-pad">

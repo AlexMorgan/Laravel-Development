@@ -21,6 +21,10 @@
 			{{ Form::password('password', array('placeholder' => 'Password'))}}
 			{{ Form::submit('Login', array('class' => 'btn btn-success')) }}
 			{{ HTML::link('register', 'Register', array('class' => 'btn btn-primary')) }}
+			<!-- 'link_to_route' generate an HTML link to the given route | Since we used a resource controller the .create route is automatically made -->
+			<div class="row-pad ">
+			{{ link_to_route('password_resets.create', 'Forgot your password?') }}
+			</div>
 			{{ Form::close() }}
 		</div>
 

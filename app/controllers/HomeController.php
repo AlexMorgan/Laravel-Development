@@ -27,6 +27,28 @@ class HomeController extends BaseController {
             return View::make('home.index');
         }
 
+    public function postNewContact()
+        {
+            $data = Input::all();
+
+            $rules = array('email' => 'required|unique:contacts|email');
+
+            $validation = Validator::make($data, $rules);
+
+            if($validation->passes())
+            {   
+                $newContact = new Contact();
+                $newContact->email = $data['email'];
+                $newContact->save();
+
+                return Redirect::to('/');
+
+            } else {
+                return Redirect::to('/')->withInput()->withErrors($validation);
+            }
+
+        }
+
     public function getTeam()
         {
             return View::make('home.team');

@@ -4,6 +4,7 @@ class UsersController extends \BaseController {
 
 	public function getContact()
 	{
+		//The users.contact syntax is equivalent to users/contact (contact.blade.php within the users directory)
 		return View::make('users.contact');
 	}
 
@@ -14,6 +15,8 @@ class UsersController extends \BaseController {
 		$data = Input::all();
 		//Next we create a variable called rules and store the rules that we created in an array
 		$rules = array(
+			'name' => 'required',
+			'email' => 'required|email',
 			'subject' => 'required',
 			'message' => 'required'
 		);
@@ -31,6 +34,8 @@ class UsersController extends \BaseController {
 			//If the validation passes:
 			//We create a variable called $emailcontent and store the subject and message from our contact form i
 			$emailcontent = array(
+				'emailname' => $data['name'],
+				'emailaddress' => $data['email'],
 				'subject' => $data['subject'],
 				'emailmessage' => $data['message']
 			);

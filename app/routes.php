@@ -58,6 +58,17 @@ Route::group(array('before' => 'auth'), function(){
 	
 });
 
+// Creates a group filter
+Route::group(array('before' => 'auth'), function(){
+	Route::get('survey', 'QuestionController@getIndex');	
+});
+
+Route::resource('survey', 'QuestionController');
+
+Route::group(array('before' => 'auth'), function(){
+	Route::get('results', 'HomeController@getResults');
+});
+
 
 //Website for all the files for this tutorial!
 //https://github.com/fallendown/Laravel-4-login-registration/blob/master/app/routes.php

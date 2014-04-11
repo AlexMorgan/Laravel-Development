@@ -5,6 +5,22 @@ use Illuminate\Auth\Reminders\RemindableInterface;
 
 class User extends Eloquent implements UserInterface, RemindableInterface {
 
+
+	// Each user has many questions
+	public function user_questions() {
+		return $this->hasMany('User_Question');
+	}
+
+	// Each user has many groups
+	public function user_groups() {
+		return $this->hasMany('User_Group');
+	}
+
+	// Each user has many addresses
+	public function addresses() {
+		return $this->hasMany('Address');
+	}
+	
 	/**
 	 * The database table used by the model.
 	 *
@@ -48,5 +64,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	{
 		return $this->email;
 	}
+
+
 
 }

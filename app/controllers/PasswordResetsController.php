@@ -19,7 +19,7 @@ class PasswordResetsController extends BaseController {
 	 */
 	public function create()
 	{
-		//creating the view
+		//creating the view to allow users to reset their password
 		return View::make('password_resets.create');
 	}
 
